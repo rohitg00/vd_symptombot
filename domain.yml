@@ -1,0 +1,357 @@
+slots:
+  symptom:
+    type: list
+  decision_type:
+    type: list
+  result_type:
+    type: list
+  delivery_type:
+    type: list
+  choice:
+    type: list
+  preg:
+    type: list
+  sex:
+    type: list
+  chro:
+    type: list
+  brief:
+    type: list
+  cerv:
+    type: list
+  urine:
+    type: list
+
+intents:
+  - greet
+  - symptom_checker
+  - decision
+  - affirm
+  - deny
+  - chronic_hype
+  - chronic_diab
+  - child_choice
+  - goodbye
+  - delivery
+  - pregnant_disease
+  - sexual_active
+  - urinary_question
+  - chronic_disease
+  - brief_obsteric
+  - cervical_smears
+
+entities:
+  - symptom
+  - decision_type
+  - result_type
+  - chronic_type
+  - choice
+  - delivery_type
+  - preg
+  - sex
+  - brief
+  - urine
+  - chro
+  - cerv
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_goodbye:
+   - text: "Thanks for choosing us, Have a good day! Bye..."
+
+  utter_initial_bot:
+    - text: "I'm Kish. I'm here to help you with System checker Tool. \n
+             I'm not a substitute for professional Doctor, Medical Advisor. In Case of emergency always consultant a medical professional for serious symptoms. \n
+             When you agree to our Terms of Use and Privacy policy, We can continue."
+      buttons:
+        - title: "Agree"
+        - title: "Decline"
+
+  utter_sym:
+    - text: "Choose from below queries:"
+      buttons:
+        - title: "pregnant"
+          payload: "/pregnant_disease"
+        - title: "sexual status"
+          payload: "/sexual_active"
+        - title: "urinary questions"
+          payload: "/urinary_question"
+        - title: "chronic disease"
+          payload: "/chronic_disease"
+        - title: "brief obsteric"
+          payload: "/brief_obsteric"
+        - title: "cervical smears"
+          payload: "/cervical_smears"
+        # - title: "pregnant"
+        #   payload: "/pregnant_disease"
+
+  utter_pregnancy_check:
+    - text: "Are you pregnant?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_menstrual_check:
+    - text: "When was your last Menstrual Period(LMP)?"
+
+  utter_sexact_check:
+    - text: "Are you sexually active?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexacta_check:
+    - text: "Do you have a regular partner?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexactb_check:
+    - text: "Have you had a sexual health screen in the past?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexactc_check:
+    - text: "Have you noticed any changes to your vaginal discharge?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexactd_check:
+    - text: "Have you noticed any rashes or itching around your vulva?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexacte_check:
+    - text: "Do you have pain when you’re having sex (dyspareunia)?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexactf_check:
+    - text: "Are you using contraception at the moment?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexactg_check:
+    - text: ". Is there any chance you could be pregnant (e.g missed pills)?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_sexacth_check:
+    - text: "Have you ever been treated for an STI?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+
+  utter_urinarya_check:
+    - text: "Urinary Questions\n
+            Any problems with going to the toilet?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_urinaryd_check:
+    - text: "Urinary Questions\n
+            So you have the sensation of “dragging” in your vagina (prolapse)?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_urinaryb_check:
+    - text: "Urinary Questions\n
+            Do you have any problems with incontinence?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_urinaryc_check:
+    - text: "Urinary Questions\n
+            ADo you have any burning or stinging on passing urine (dysuria)?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_urinarye_check:
+    - text: "Urinary Questions\n
+            Are you passing urine more often (frequency)?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_chronic_check:
+    - text: "Do you have chronic disease?"
+      buttons:
+        - title: "Hypertension"
+          payload: '/chronic_hype'
+        - title: "Diabetes"
+          payload: '/chronic_diab'
+
+  utter_hyper_check:
+    - text: "Hypertension"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_diabet_check:
+    - text: "Diabetes"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_briefa_check:
+    - text: "Have you ever have been pregnant?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_briefb_check:
+    - text: "Are you currently trying to get pregnant or have plans for a baby soon?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_pregb_check:
+    - text: "Do you have any children?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_child_check:
+    - text: "How many children you have?"
+      buttons:
+        - title: "1"
+          payload: "/choice"
+        - title: "2"
+          payload: "/choice"
+        - title: "3"
+          payload: "/choice"
+        - title: "3 plus"
+          payload: "/choice"
+
+  utter_child1_check:
+    - text: "Delivery type"
+      buttons:
+        - title: "vaginal deliveries"
+          payload: '/delivery_type'
+        - title: "C-Section"
+          payload: '/delivery_type'
+
+  utter_cervsma_check:
+    - text: "How was your last cervical smears?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_cervsmb_check:
+    - text: "Have you been vaccinated against HPV?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_cervsmc_check:
+    - text: "Any abnormal smears?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_cervsmd_check:
+    - text: "Any treatment required?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  actions:
+    - utter_greet
+    - utter_initial_bot
+    - utter_sym
+    - utter_goodbye
+    - utter_pregnancy_check
+    - utter_menstrual_check
+    - utter_sexact_check
+    - utter_sexacta_check
+    - utter_sexactb_check
+    - utter_sexactc_check
+    - utter_sexactd_check
+    - utter_sexacte_check
+    - utter_sexactf_check
+    - utter_sexactg_check
+    - utter_sexacth_check
+    - utter_urinarya_check
+    - utter_urinaryb_check
+    - utter_urinaryc_check
+    - utter_urinaryd_check
+    - utter_urinarye_check
+    - utter_chronic_check
+    - utter_hyper_check
+    - utter_diabet_check
+    - utter_briefa_check
+    - utter_briefb_check
+    - utter_pregb_check
+    - utter_child_check
+    - utter_child1_check
+    - utter_cervsma_check
+    - utter_cervsmb_check
+    - utter_cervsmc_check
+    - utter_cervsmd_check
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+    
