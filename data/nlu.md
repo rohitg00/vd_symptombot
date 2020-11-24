@@ -81,6 +81,19 @@
 - Need [brief obsteric](brief) information
 - [brief obsteric](brief) query
 
+## intent:cervical_smears
+- [cervical smears](cerv)
+- Tell more about [cervical smears](cerv)
+- Need [cervical smears](cerv) information
+- [cervical smears](cerv) query
+
+## intent:excess_vd
+- [excess vaginal discharge](exc)
+- Tell more about [excess vaginal discharge](exc)
+- Need [excess vaginal discharge](exc) information
+- [excess vaginal discharge](exc) query
+
+
 ## intent:child_choice
 - [1](choice)
 - [2](choice)

@@ -84,6 +84,8 @@ responses:
           payload: "/brief_obsteric"
         - title: "cervical smears"
           payload: "/cervical_smears"
+        - title: "excess vaginal discharge"
+          payload: "/excess_vd"
         # - title: "pregnant"
         #   payload: "/pregnant_disease"
 
@@ -316,6 +318,82 @@ responses:
         - title: "No"
           payload: '/deny'
 
+  utter_excess_vd:
+    - text: "Do you have excessive vaginal discharge?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_color:
+    - text: "What is the color of discharge?"
+      buttons:
+        - title: "colourless"
+          payload: '/colourless'
+        - title: "white"
+          payload: '/white'
+        - title: "yellow"
+          payload: '/yellow'
+        - title: "grey"
+          payload: '/grey'
+        - title: "pink"
+          payload: '/pink'
+        - title: "red"
+          payload: '/red'
+        - title: "thick white"
+          payload: '/thick_white'
+        
+  utter_asym:
+    - text: "Do you have any associated symptoms?"
+      buttons:
+        - title: "foul order"
+          payload: '/foul_order'
+        - title: "No"
+          payload: '/deny'
+        - title: "fishy order"
+          payload: '/fishy_order'
+  
+# for no go to symptoms list
+
+  utter_foul:
+    - text: "Do you have Vaginal itching, burning, soreness, or pain during Sex/Micturition"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+
+  utter_yeast:
+    - text: "Probable Yeast Infection"
+      buttons:
+        - title: "consult gynecologist"
+          payload: '/gynecologist'
+        - title: "Do you have High Risk factors"
+          payload: 'high_risk'
+
+  utter_appoint:
+    - text: "Do you want to take appointment now?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm' 
+          # route to platform
+        - title: "No"
+          payload: '/deny'
+          # route to symptm list
+
+  utter_highrisk:
+    - text: "Do you have High Risk factors"
+      buttons:
+      - title: "Diabetes"
+        payload: '/highrisk1'
+      - title: "diet high in refined sugars"
+        payload: '/highrisk2'
+      - title: "Use of broadspectrum antibiotics"
+        payload: '/highrisk3'
+      - title: "Immunosuppression"
+        payload: '/highrisk4'
+          
   actions:
     - utter_greet
     - utter_initial_bot

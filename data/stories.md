@@ -489,6 +489,32 @@
 * goodbye
   - utter_goodbye
 
+## path 5 b no
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_sym
+* brief_obsteric{"brief":"brief obsteric"}
+  - utter_briefb_check
+* deny{"result_type":"No"}
+* goodbye
+  - utter_goodbye
+
+## path 5 b yes
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_sym
+* brief_obsteric{"brief":"brief obsteric"}
+  - utter_briefb_check
+* affirm{"result_type":"Yes"}
+* goodbye
+  - utter_goodbye
+
 <!-- ## path 5 a yes
 * greet
   - utter_greet
@@ -529,7 +555,7 @@
   - utter_pregb_check
 * affirm{"result_type":"Yes"}
   - utter_child_check
-* child_choice{"choice":"1","choice":"2","choice":"3","choice":"3+"}
+* child_choice{"choice":"1","choice":"2","choice":"3","choice":"3 plus"}
   - utter_child1_check
 * delivery{"delivery_type":"vaginal deliveries"}
 * goodbye
@@ -548,7 +574,7 @@
   - utter_pregb_check
 * affirm{"result_type":"Yes"}
   - utter_child_check
-* child_choice{"choice":"1","choice":"2","choice":"3","choice":"3+"}
+* child_choice{"choice":"1","choice":"2","choice":"3","choice":"3 plus"}
   - utter_child1_check
 * delivery{"delivery_type":"C-Section"}
 * goodbye
@@ -657,6 +683,18 @@
 * deny{"result_type":"No"}
 * goodbye
   - utter_goodbye
+
+## path 7 no
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_sym
+* excess_vd{"exc":"excess vaginal discharge"}
+  - utter_excess_vd
+* deny{"result_type":"No"}
+  - utter_sym
 
 ## say goodbye
 * goodbye
