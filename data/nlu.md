@@ -115,3 +115,64 @@
 ## intent:chronic_diab
 - [Diabetes](chronic_type)
 - [diabetes](chronic_type)
+
+## intent:colourless
+- [colourless](color1)
+- [Colourless](color1)
+
+## intent:white
+- [white](color2)
+- [White](color2)
+
+## intent:white
+- [yellow](color3)
+- [Yellow](color3)
+
+## intent:grey
+- [grey](color4)
+- [Grey](color4)
+
+## intent:pink
+- [pink](color5)
+- [Pink](color5)
+
+## intent:red
+- [red](color6)
+- [Red](color6)
+
+## intent:thick_white
+- [thick white](color7)
+- [Thick White](color7)
+
+## intent:foul_oudor
+- [foul oudor](oudor1)
+- [Foul oudor](oudor1)
+
+## intent:fishy_oudor
+- [fishy oudor](oudor2)
+- [Fishy oudor](oudor2)
+
+## intent:gynecologist
+- [consult gynecologist](gyn)
+- [Consult gynecologist](gyn)
+
+## intent:high_risk
+- [Do you have High Risk factors](highrisk)
+- [Risk factors](highrisk)
+
+## intent:highrisk1
+- [Diabetes](risk1)
+- [diabetes](risk1)
+
+## intent:highrisk2
+- [diet high in refined sugar](risk2)
+- [Diet high in refined sugar](risk2)
+
+## intent:highrisk3
+- [Use of broadspectrum antibiotics](risk3)
+- [use of broadspectrum antibiotics](risk3)
+
+
+## intent:highrisk4
+- [Immunosuppression](risk4)
+- [immunosuppression](risk4)

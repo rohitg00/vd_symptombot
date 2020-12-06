@@ -347,12 +347,12 @@ responses:
   utter_asym:
     - text: "Do you have any associated symptoms?"
       buttons:
-        - title: "foul order"
-          payload: '/foul_order'
+        - title: "foul oudor"
+          payload: '/foul_oudor'
         - title: "No"
           payload: '/deny'
-        - title: "fishy order"
-          payload: '/fishy_order'
+        - title: "fishy oudor"
+          payload: '/fishy_oudor'
   
 # for no go to symptoms list
 
@@ -370,7 +370,7 @@ responses:
         - title: "consult gynecologist"
           payload: '/gynecologist'
         - title: "Do you have High Risk factors"
-          payload: 'high_risk'
+          payload: '/high_risk'
 
   utter_appoint:
     - text: "Do you want to take appointment now?"
@@ -427,6 +427,13 @@ responses:
     - utter_cervsmb_check
     - utter_cervsmc_check
     - utter_cervsmd_check
+    - utter_excess_vd
+    - utter_color
+    - utter_asym
+    - utter_foul
+    - utter_yeast
+    - utter_appoint
+    - utter_highrisk    
 
 session_config:
   session_expiration_time: 60
