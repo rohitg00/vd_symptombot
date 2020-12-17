@@ -11,11 +11,9 @@ class ActionIcpFever(Action):
         return "action_icp_fever"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('These symptoms may be caused by BRONCHITIS. A high
-fever along with cough and shortness of breath could be a sign
-of PNEUMONIA.')
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
+        dispatcher.utter_message('These symptoms may be caused by BRONCHITIS. A high fever along with cough and shortness of breath could be a sign of PNEUMONIA.')
+        dispatcher.utter_message('If your child has bronchitis, be sure he or she gets lots ofrest and drinks plenty of fluids.')
+        dispatcher.utter_message('Pneumonia is a serious infection. See your doctor rightaway.')
         
 class ActionIcpTightCough(Action):
 
@@ -23,9 +21,9 @@ class ActionIcpTightCough(Action):
         return "action_icp_tight_cough"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
+        dispatcher.utter_message('These may be symptoms of BRONCHIOLITIS.')
+        dispatcher.utter_message('ASTHMA can also cause wheezing, coughing and trouble breathing.')
+        dispatcher.utter_message('Bronchiolitis is a serious infection. Asthma flare-ups can also be a serious problem. See your doctor right away to find out what’s causing your symptoms.')
         
 class ActionIcpDryCough(Action):
 
@@ -33,8 +31,8 @@ class ActionIcpDryCough(Action):
         return "action_icp_dry_cough"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
+        dispatcher.utter_message('These symptoms may be caused by PLEURISY, an inflammation of the lining around the lung.')
+        dispatcher.utter_message('See your doctor. He or she can determine what iscausing the pleurisy. Often, an anti-inflammatory drug will help relieve symptoms. DO NOT give aspirin to your child without consulting your doctor first')
         
         
 class ActionIcpSharpPain(Action):
@@ -43,8 +41,8 @@ class ActionIcpSharpPain(Action):
         return "action_icp_sharp_pain"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
+        dispatcher.utter_message('In rare cases, air will leak from a lung to fill the chest cavity. This makes it difficult to breathe. This condition is called a PNEUMOTHORAX.')
+        dispatcher.utter_message('See your doctor right away. Treatment of a pneumothorax may require hospitalization.')
         
 class ActionIcpHighFever(Action):
 
@@ -52,8 +50,9 @@ class ActionIcpHighFever(Action):
         return "action_icp_high_fever"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
+        dispatcher.utter_message('These may be signs of a serious condition called EPIGLOTTITIS.')
+        dispatcher.utter_message('URGENT.')
+        dispatcher.utter_message('GET EMERGENCY MEDICAL HELP RIGHT AWAY.')
         
 class ActionIcpPainTenderness(Action):
 
@@ -61,8 +60,8 @@ class ActionIcpPainTenderness(Action):
         return "action_icp_pain_tenderness"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('')
-        dispatcher.utter_message('')
+        dispatcher.utter_message('This may be caused by COSTOCHONDRITIS, an inflammation of the joints in the chest.')
+        dispatcher.utter_message('Heat and an anti-inflammatory medicine, such as ibuprofen, may help relieve symptoms. DO NOT give aspirin to your child without consulting your doctor first (see warning below). See your doctor if the pain is severe or if it doesn’t improve with these medicines.')
         
 
 class ContactForm(FormAction):
