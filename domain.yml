@@ -1,3 +1,6 @@
+forms:
+  - contact_form
+
 slots:
   symptom:
     type: list
@@ -21,6 +24,70 @@ slots:
     type: list
   urine:
     type: list
+  up:
+    type: list
+  ms:
+    type: list
+  bb:
+    type: list
+  mu:
+    type: list
+  feel_tire:
+    type: list
+  cremp:
+    type: list
+  preg_c:
+    type: list
+  want:
+    type: list
+  unwant:
+    type: list
+  mcom:
+    type: list
+  lcom:
+    type: list
+  com:
+    type: list
+  scom:
+    type: list
+  dev:
+    type: list
+  stro:
+    type: list
+  osys:
+    type: list
+  esys:
+    type: list
+  alert:
+    type: list
+  diffdiag:
+    type: list 
+  covid:
+    type: list 
+  testcovid:
+    type: list 
+  ill:
+    type: list 
+  exposed:
+    type: list 
+  infect:
+    type: list 
+  to_do:
+    type: list 
+  covidpreg:
+    type: list
+  testtime:
+    type: list
+  lt:
+    type: list
+  fet:
+    type: list
+  phone_number:
+    type: unfeaturized
+  email:
+    type: unfeaturized
+  name:
+    type: unfeaturized
 
 intents:
   - greet
@@ -39,6 +106,35 @@ intents:
   - chronic_disease
   - brief_obsteric
   - cervical_smears
+  - pregtest_done
+  - preg_confirm
+  - morning_sick
+  - breast_big
+  - more_urine
+  - tired
+  - cramp
+  - want_preg
+  - unwant_preg
+  - mcommon_sys
+  - lcommon_sys
+  - srs_sys
+  - common_sys
+  - dev_sys
+  - other_sys
+  - stroke
+  - emergency_sys
+  - alert_risk
+  - diff_diag
+  - peep_covid
+  - test_covid
+  - illness
+  - expose
+  - infected
+  - todo
+  - covid_preg
+  - lt_covid
+  - test_time
+  - fetus
 
 entities:
   - symptom
@@ -53,8 +149,52 @@ entities:
   - urine
   - chro
   - cerv
+  - up
+  - ms
+  - bb
+  - mu
+  - feel_tire
+  - cremp
+  - preg_c
+  - want
+  - unwant
+  - mcom
+  - lcom 
+  - com 
+  - scom 
+  - dev 
+  - stro 
+  - osys
+  - esys 
+  - alert 
+  - diffdiag 
+  - covid 
+  - testcovid 
+  - ill 
+  - exposed 
+  - infect 
+  - to_do 
+  - covidpreg
+  - testtime
+  - lt
+  - fet
+
 
 responses:
+  utter_ask_name:
+  - text: "Can you quickly tell us your name to continue."
+  - text: "Your name, please"
+  - text: "Can I know your name?"
+
+  utter_ask_phone_number:
+  - text: "On what number we can contact you?"
+  
+  utter_ask_email:
+  - text: "Please provide your email id as well"
+
+  utter_contact_details:
+  - text: "Thank you for submitting the Details. Here are your details. Name: {name}, Phone: {phone_number} and Email: {email}."
+  
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -69,8 +209,12 @@ responses:
         - title: "Agree"
         - title: "Decline"
 
+  utter_syscheck_main:
+    - tect: "I'm System Checker tool, Choose any system checker from given below:"
+      buttons:
+
   utter_sym:
-    - text: "Choose from below queries:"
+    - text: "I'm System Chcker - Vaginal Discharge, Choose from below queries:"
       buttons:
         - title: "pregnant"
           payload: "/pregnant_disease"
@@ -96,6 +240,64 @@ responses:
           payload: '/affirm'
         - title: "No"
           payload: '/deny'
+
+#pregnancy mindmap
+  utter_syscheck_preg:
+    - text: "Hello, I'm System Checker - Pregnancy, Choose from below given options"
+      buttons:
+        - title: "pregnant"
+          payload: "/pregnant_disease"
+        - title: "Did you get your Urine Pregnancy Test done at home?"
+          payload: "/pregtest_done"
+        - title: "Pregnancy Confirmed"
+          payload: "/preg_confirm"
+
+  utter_early_pregnancy:
+    - text: "Do you have any of these symptoms of Early Pregnancy?"
+      buttons:
+        - title: "Nausea, with or without vomiting (morning sickness)"
+          payload: '/morning_sick'
+        - title: "The breasts getting bigger and feeling painful"
+          payload: '/breast_big'
+        - title: "Needing to urinate more often than usual"
+          payload: '/more_urine'
+        - title: "Feeling more tired than usual"
+          payload: '/tire'
+        - title: "Mild cramping in the lower belly"
+          payload: '/cramp'
+
+  utter_nausea:
+    - text: "Nausea, with or without vomiting (morning sickness)"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+  
+  utter_pregchk_done:
+    - text: "Did you get your Urine Pregnancy Test done at home?"
+      buttons:
+        - title: "Yes"
+          payload: '/affirm'
+        - title: "No"
+          payload: '/deny'
+  
+  utter_pregdone_check:
+    - text: "Get your Urine Pregnancy Test done"
+
+  utter_preg_confirm:
+    - text: "Pregnancy Confirmed"
+      buttons:
+        - title: "wanted pregnancy"
+          payload: '/want_preg'
+        - title: "unwanted pregnancy"
+          payload: '/unwant_preg'
+  
+  uttter_want_preg:
+    - text: "Consult Gynaecologist and Attend Antenatal Clinic"
+
+  uttter_unwant_preg:
+    - text: "Consult Gynaecologist and Consider Medical Termination of Pregnancy(MTP)"
 
   utter_menstrual_check:
     - text: "When was your last Menstrual Period(LMP)?"
@@ -394,6 +596,183 @@ responses:
       - title: "Immunosuppression"
         payload: '/highrisk4'
           
+# covid mind map
+
+  utter_covid:
+  - text: "Hi I am Covid19 - Symptoms Checker, How can I help you?"
+    buttons:
+      - title: "Most common symptoms"
+        payload: '/mcommon_sys'
+      - title: "Less common  symptoms"
+        payload: '/lcommon_sys'
+      - title: "Serious symptoms"
+        payload: '/srs_sys'
+      - title: "common symptoms"
+        payload: '/common_sys'
+      - title: "How long does it take to develop symptoms?"
+        payload: '/dev_sys'
+      - title: "Other symptoms"
+        payload: '/other_sys'
+      - title: "Strokes have also been reported in some people who have COVID-19"
+        payload: '/stroke'
+      - title: "emergency symptoms"
+        payload: '/emergency_sys'
+      - title: "ALERT Risk factors for progression to acute respiratory distress syndrome (ARDS)"
+        payload: '/alert_risk'
+      - title: "DIFFERENTIAL DIAGNOSIS"
+        payload: '/diff_diag'
+      - title: "What happens to people who get COVID-19"
+        payload: '/peep_covid'
+      - title: "What test should I get to see if I have COVID-19"
+        payload: '/test_covid'
+      - title: "Who is most at risk of severe illness from COVID-19"
+        payload: '/illness'
+      - title: "After exposure to someone who has COVID-19, do the following"
+        payload: '/expose'
+      - title: "How can we protect others and ourselves if we don't know who is infected"
+        payload: '/infected'
+      - title: "What should I do if I have COVID-19 symptoms"
+        payload: '/todo'
+      - title: "How does COVID-19 affect pregnant women"
+        payload: '/covid_preg'
+      - title: "Are there long-term effects of COVID-19"
+        payload: '/lt_covid'
+      - title: "When should I get a test for COVID-19"
+        payload: '/test_time'
+      - title: "How can COVID-19 affect a fetus"
+        payload: '/fetus'
+
+  utter_mcommon:
+  - text: "Most Common Symptoms:\n
+          1. Fever\n
+          2. Dry cough\n
+          3. Tiredness"
+
+  utter_lcommon:
+  - text: "Less Common Symptoms:\n
+          1. aches and pains\n
+          2. sore throat\n
+          3. diarrhoea\n
+          4. conjuctivitis\n
+          5. headache\n
+          6. loss of taste or smell"
+
+  utter_srs_sys:
+  - text: "Serious Symptoms:\n
+          1. difficulty breathing or shortness of breath\n
+          2. chest pain or pressure\n
+          3. loss of speech or movement"
+
+  utter_other_sys:
+  - text: "Other Symptoms:\n
+          1. sore throat\n
+          2. headache\n
+          3. chills, sometimes with shaking\n
+          4. loss of smell or taste\n
+          5. congestion or runny nose\n
+          6. nausea or vomiting\n
+          7. Diarrhea"
+
+  utter_common_sys:
+  - text: "Common Symptoms:\n
+          1. Fatigue:70%\n
+          2. Fever:99%\n
+          3. Dry Cough:59%\n
+          4. loss of apetite:40%\n
+          5. Body aches:35%\n
+          6. shortness of breath:31%\n
+          7. Mucus or Phlegm:27%"
+  
+  utter_dev_sys:
+  - text: "The time from exposure to COVID-19 to the moment when symptoms begin is, on average, 5-6 days and can range from 1-14 days. This is why people who have been exposed to the virus are advised to remain at home and stay away from others, for 14 days, in order to prevent the spread of the virus, especially where testing is not easily available."
+
+  utter_emergency:
+  - text: "1. Trouble Breathing\n
+          2. Chest pain or pressure in your chest\n
+          3. Blusidh lips or face\n
+          4. Sudden Confusion\n
+          5. You need medical care as soon as possible. Call your doctor’s office or hospital before you go in. This will help them prepare to treat you and protect medical staff and other patients."
+  
+  utter_stroke:
+  - text: "1. Face. Is one side of the person’s face numb or drooping? Is their smile lopsided?\n
+          2. Arms. Is one arm weak or numb? If they try to raise both arms, does one arm sag?\n
+          3. Speech. Can they speak clearly? Ask them to repeat a sentence.\n
+          4. Time. Every minute counts when someone shows signs of a stroke. Call 911 right away."
+
+  utter_diffdiag:
+  - text: "Influenza, other virally-mediated respiratory illness and COVID-19 infection share the following characteristics:\n
+          1. Fever or feeling feverish/chills \n
+          2. Cough \n
+          3. Shortness of breath or difficulty breathing \n
+          4. Fatigue \n
+          5. Sore throat\n
+          6. Runny or stuff nose\n
+          7. Muscle pain or body aches\n
+          8. headache\n
+          9. Vomiting and diarrhea; more common in children than adults\n
+          10. The single factor that distinguishes COVID-19 from influenza is the lose of sensation of taste and smell (seen in up to 60% of patients based upon observational data from Italy) (64)."        
+
+  uttter_alert:
+  - text: "1. Age >65 years, neutrophilia, and organ or coagulation dysfunction\n
+          2. Chronic lung disease, immunocompromise, obesity\n
+          3. Hypertension and diabetes"
+  
+  utter_happens:
+  - text: "1. Among those who develop symptoms, most (about 80%) recover from the disease without needing hospital treatment. About 15% become seriously ill and require oxygen and 5% become critically ill and need intensive care.\n
+          2. Complications leading to death may include respiratory failure, acute respiratory distress syndrome (ARDS), sepsis and septic shock, thromboembolism, and/or multiorgan failure, including injury of the heart, liver or kidneys.\n
+          3. In rare situations, children can develop a severe inflammatory syndrome a few weeks after infection."
+
+  utter_test:
+  - text: "In most situations, a molecular test is used to detect SARS-CoV-2 and confirm infection. Polymerase chain reaction (PCR) is the most commonly used molecular test. Samples are collected from the nose and/or throat with a swab. Molecular tests detect virus in the sample by amplifying viral genetic material to detectable levels. For this reason, a molecular test is used to confirm an active infection, usually within a few days of exposure and around the time that symptoms may begin."
+
+  utter_illness:
+  - text: "1. People aged 60 years and over, and those with underlying medical problems like high blood pressure, heart and lung problems, diabetes, obesity or cancer, are at higher risk of developing serious illness.\n
+          2. However, anyone can get sick with COVID-19 and become seriously ill or die at any age."
+  
+  utter_protect:
+  - text: "Stay safe by taking some simple precautions, such as physical distancing, wearing a mask, especially when distancing cannot be maintained, keeping rooms well ventilated, avoiding crowds and close contact, regularly cleaning your hands, and coughing into a bent elbow or tissue. Check local advice where you live and work. Do it all!"
+
+  utter_todo:
+  - text: "1. If you have any symptoms suggestive of COVID-19, call your health care provider or COVID-19 hotline for instructions and find out when and where to get a test, stay at home for 14 days away from others and monitor your health.\n
+          2. If you have shortness of breath or pain or pressure in the chest, seek medical attention at a health facility immediately. Call your health care provider or hotline in advance for direction to the right health facility.\n
+          3. If you live in an area with malaria or dengue fever, seek medical care if you have a fever.\n
+          4. If local guidance recommends visiting a medical centre for testing, assessment or isolation, wear a medical mask while travelling to and from the facility and during medical care. Also keep at least a 1-metre distance from other people and avoid touching surfaces with your hands.  This applies to adults and children."
+  
+  utter_expose:
+  - text: "1. Call your health care provider or COVID-19 hotline to find out where and when to get a test.\n
+          2. Cooperate with contact-tracing procedures to stop the spread of the virus.\n
+          3. If testing is not available, stay home and away from others for 14 days.\n
+          4. While you are in quarantine, do not go to work, to school or to public places. Ask someone to bring you supplies.\n
+          5. Keep at least a 1-metre distance from others, even from your family members.\n
+          6. Wear a medical mask to protect others, including if/when you need to seek medical care.\n
+          7. Clean your hands frequently. 
+          8. Stay in a separate room from other family members, and if not possible, wear a medical mask.\n
+          9. Keep the room well-ventilated. \n
+          10. If you share a room, place beds at least 1 metre apart.\n
+          11. Monitor yourself for any symptoms for 14 days.\n
+          12. Stay positive by keeping in touch with loved ones by phone or online, and by exercising at home.\n
+          13. If you live in an area with malaria or dengue fever, seek medical help if you have a fever. While travelling to and from the health facility and during medical care, wear a mask, keep at least a 1-metre distance from other people and avoid touching surfaces with your hands. This applies to adults and children."
+
+  utter_ltcovid:
+  - text: "Some people who have had COVID-19, whether they have needed hospitalization or not, continue to experience symptoms, including fatigue, respiratory and neurological symptoms."
+
+  utter_testtime:
+  - text: "1. Anyone with symptoms should be tested, wherever possible. People who do not have symptoms but have had close contact with someone who is, or may be, infected may also consider testing – contact your local health guidelines and follow their guidance.\n
+          2. While a person is waiting for test results, they should remain isolated from others. Where testing capacity is limited, tests should first be done for those at higher risk of infection, such as health workers, and those at higher risk of severe illness such as older people, especially those living in seniors’ residences or long-term care facilities."
+
+  utter_preg_covid:
+  - text: "1. Researchers are still learning how COVID-19 affects pregnant women. Current reports suggest that pregnant women may have a higher risk for more severe illness from COVID-19 than nonpregnant women. Reports note that:\n
+          2. Pregnant women with COVID-19 may be more likely than nonpregnant women with COVID-19 to need care in an intensive care unit (ICU) or need a ventilator (for breathing support).\n
+          3. Pregnant women with some health conditions, such as obesity and gestational diabetes, may have an even higher risk of severe illness, similar to nonpregnant women with these conditions.\n
+          4. Also, it’s important to know that reports suggest the risk of death is not higher for pregnant women with COVID-19 than for nonpregnant women with COVID-19."
+
+  utter_fetus:
+  - text: "1. Remember that researchers are learning more about COVID-19 all the time. Some researchers are looking specifically at COVID-19 and its possible effects on a fetus. Here’s what they know now:\n
+          2. Researchers have found a few cases of COVID-19 that may have passed to a fetus during pregnancy, but this seems to be rare.\n
+          3. Researchers have studied COVID-19 infection, preterm birth, and stillbirth. Some studies suggest there may be an increased risk of preterm birth and stillbirth for women with COVID-19. Other studies have not found this to be true. But information is still limited. Researchers are continuing to study these outcomes to better understand the effects of COVID-19 before birth.\n
+          4. After birth, a newborn can get the virus if they are exposed to it."
+
+
   actions:
     - utter_greet
     - utter_initial_bot
@@ -433,7 +812,36 @@ responses:
     - utter_foul
     - utter_yeast
     - utter_appoint
-    - utter_highrisk    
+    - utter_highrisk   
+    - utter_syscheck_preg
+    - utter_early_pregnancy
+    - utter_nausea
+    - utter_pregchk_done
+    - utter_pregdone_check
+    - utter_preg_confirm
+    - utter_want_preg
+    - utter_unwant_preg
+    - utter_covid
+    - utter_mcommon
+    - utter_lcommon
+    - utter_srs_sys
+    - utter_other_sys
+    - utter_common_sys
+    - utter_dev_sys
+    - utter_emergency
+    - utter_stroke
+    - utter_diffdiag
+    - utter_alert
+    - utter_happens
+    - utter_test
+    - utter_illness
+    - utter_protect
+    - utter_todo
+    - utter_expose
+    - utter_ltcovid
+    - utter_testtime
+    - utter_preg_covid
+    - utter_fetus 
 
 session_config:
   session_expiration_time: 60

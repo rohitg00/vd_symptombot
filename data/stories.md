@@ -700,3 +700,336 @@
 * goodbye
   - utter_goodbye
 
+# pregnancy path 1 yes
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_menstrual_check
+
+# pregnancy path 1 yes a yes
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_early_pregnancy
+* morning_sick{"ms":"morning sickness","ms":"Nausea"}
+  - utter_nausea
+* affirm{"result_type":"Yes"}
+  - utter_pregdone_check
+
+# pregnancy path 1 yes a no
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_early_pregnancy
+* morning_sick{"ms":"morning sickness","ms":"Nausea"}
+  - utter_nausea
+* deny{"result_type":"No"}
+  - utter_pregdone_check
+
+# pregnancy path 1 yes b
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_early_pregnancy
+* breast_big{"bb":"breasts getting bigger"}
+
+# pregnancy path 1 yes c
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_early_pregnancy
+* more_urine{"mu":"urinate more"}
+
+# pregnancy path 1 yes d
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_early_pregnancy
+* tire{"feel_tire":"tired"}
+
+# pregnancy path 1 yes e
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregnant_disease{"preg":"pregnant"}
+  - utter_pregnancy_check
+* affirm{"result_type":"Yes"}
+  - utter_early_pregnancy
+* cramp{"cremp":"cramping"}
+
+# pregnancy path 2 no
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* pregtest_done{"up":"Urine Pregnancy Test"}
+  - utter_pregchk_done
+* deny{"result_type":"No"}
+  - utter_pregdone_check
+
+
+# pregnancy path 3 want 
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* preg_confirm{"preg_c":"Pregnancy Confirmed"}
+  - utter_preg_confirm
+* want_preg{"want":"wanted pregnancy"}
+  - uttter_want_preg
+
+# pregnancy path 3 unwant 
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_syscheck_preg
+* preg_confirm{"preg_c":"Pregnancy Confirmed"}
+  - utter_preg_confirm
+* want_preg{"unwant":"unwanted pregnancy"}
+  - uttter_unwant_preg
+
+# covid path 1 
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* mcoomon_sys{"mcom":"Most common symptoms"}
+  - utter_mcommon
+
+# covid path 2
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* lcoomon_sys{"lcom":"Less common symptoms"}
+  - utter_lcommon
+
+# covid path 3
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* srs_sys{"scom":"Serious symptoms"}
+  - utter_srs_sys
+
+
+# covid path 4
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* dev_sys{"dev":"develop symptoms"}
+  - utter_dev_sys
+
+# covid path 5
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* other_sys{"osys":"other symptoms"}
+  - utter_other_sys
+
+# covid path 6
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* common_sys{"com":"common symptoms"}
+  - utter_common_sys
+
+# covid path 7
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* stroke{"stro":"Strokes"}
+  - utter_stroke
+
+# covid path 8
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* emergency_sys{"esys":"emergency symptoms"}
+  - utter_emergency
+
+# covid path 9
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* diff_diag{"diffdiag":"DIFFERENTIAL DIAGNOSIS"}
+  - utter_diffdiag
+
+# covid path 10
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* peep_covid{"covid":"COVID-19"}
+  - utter_happens
+
+# covid path 11
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* test_covid{"testcovid":"test"}
+  - utter_test
+
+# covid path 12
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* illness{"ill":"severe illness"}
+  - utter_illness
+
+# covid path 13
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* infected{"infect":"infected"}
+  - utter_protect
+
+# covid path 14
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* todo{"to_do":"should I do if"}
+  - utter_todo
+
+# covid path 15
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* expose{"exposed":"exposure"}
+  - utter_expose
+
+# covid path 16
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* covid_preg{"covidpreg":"COVID-19 affect pregnant women"}
+  - utter_preg_covid
+
+# covid path 17
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* lt_covid{"lt":"long-term effects"}
+  - utter_ltcovid
+
+# covid path 18
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* fetus{"fet":"fetus"}
+  - utter_fetus
+
+# covid path 19
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* fetus{"alert_sys":"ALERT Risk factors"}
+  - uttter_alert
+
+# covid path 18
+* greet
+  - utter_greet
+* symptom_checker{"symptom":"symptoms"}
+  - utter_initial_bot
+* decision{"decision_type":"Accept"}
+  - utter_covid
+* test_time{"testtime":"test for COVID-19"}
+  - utter_testtime
