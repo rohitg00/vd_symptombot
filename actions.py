@@ -151,6 +151,9 @@ class ContactForm(FormAction):
         name = tracker.get_slot('name')
         phone = tracker.get_slot('phone_number')
         email = tracker.get_slot('email')
+        
         print(name,phone,email)
-        dispatcher.utter_message(text=f"Thank you for submitting the Details. Here are your details. Name: {name}, Phone: {phone} and Email: {email}. What can I do for you?")
+        dispatcher.utter_message(template='utter_contact_details')
+        
         return []
+        

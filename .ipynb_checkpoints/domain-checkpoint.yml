@@ -107,6 +107,10 @@ responses:
 
   utter_contact_details:
   - text: "Thank you for submitting the Details. Here are your details. Name: {name}, Phone: {phone_number} and Email: {email}."
+    buttons:
+      - title: "Try Symptoms Checker"
+        payload: '/symptom_checker{"symptom":"symptoms"}'
+        
   utter_greet:
   - text: "Hey! How are you?"
 
@@ -119,7 +123,9 @@ responses:
              When you agree to our Terms of Use and Privacy policy, We can continue."
       buttons:
         - title: "Agree"
+          payload: '/decision{"decision_type":"Accept"}'
         - title: "Decline"
+          payload: '/decision{"decision_type":"Decline"}'
 
   utter_sym:
     - text: "Choose from below queries:"
