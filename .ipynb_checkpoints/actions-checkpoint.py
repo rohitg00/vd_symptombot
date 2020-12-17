@@ -11,9 +11,7 @@ class ActionIcpFever(Action):
         return "action_icp_fever"
 
     def run(self, dispatcher, tracker, domain):
-        dispatcher.utter_message('These symptoms may be caused by BRONCHITIS. A high
-fever along with cough and shortness of breath could be a sign
-of PNEUMONIA.')
+        dispatcher.utter_message('')
         dispatcher.utter_message('')
         dispatcher.utter_message('')
         

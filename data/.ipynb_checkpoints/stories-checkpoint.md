@@ -844,3 +844,84 @@
 * goodbye
   - utter_goodbye
 
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* affirm
+  - action_icp_fever
+  
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* deny
+  - utter_icp_tight_cough
+* affirm
+  - action_icp_tight_cough
+
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* deny
+  - utter_icp_tight_cough
+* deny
+  - utter_icp_dry_cough
+* affirm
+  - action_icp_dry_cough
+  
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* deny
+  - utter_icp_tight_cough
+* deny
+  - utter_icp_dry_cough
+* deny
+  - utter_icp_sharp_pain
+* affirm
+  - action_icp_sharp_pain
+  
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* deny
+  - utter_icp_tight_cough
+* deny
+  - utter_icp_dry_cough
+* deny
+  - utter_icp_sharp_pain
+* deny
+  - utter_icp_high_fever
+* affirm
+  - action_icp_high_fever
+  
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* deny
+  - utter_icp_tight_cough
+* deny
+  - utter_icp_dry_cough
+* deny
+  - utter_icp_sharp_pain
+* deny
+  - utter_icp_high_fever
+* deny
+  - utter_icp_pain_tenderness
+* affirm
+  - action_icp_pain_tenderness
+  
+## Infant Child Path
+* infant_chest_pain
+  - utter_icp_fever
+* deny
+  - utter_icp_tight_cough
+* deny
+  - utter_icp_dry_cough
+* deny
+  - utter_icp_sharp_pain
+* deny
+  - utter_icp_high_fever
+* deny
+  - utter_icp_pain_tenderness
+* deny
+  - utter_consult_doctor
