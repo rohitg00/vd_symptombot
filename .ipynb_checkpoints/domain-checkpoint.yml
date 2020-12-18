@@ -16,6 +16,11 @@ intents:
   - brief_obsteric
   - cervical_smears
   - infant_chest_pain
+  - covid_symptoms
+  - chest_pain
+  - abdominal_pain
+  - acute_chest_pain
+  - hair_loss
 
 forms:
   - contact_form
@@ -43,8 +48,39 @@ actions:
   - action_icp_pain_tenderness
 
 responses:
+  utter_sym:
+    - text: "Choose from below queries:"
+      buttons:
+        - title: "Pregnant System Checker"
+          payload: "/pregnant_disease"
+        - title: "Sexual Status Checker"
+          payload: "/sexual_active"
+        - title: "Urinary Questions"
+          payload: "/urinary_question"
+        - title: "Chronic Disease"
+          payload: "/chronic_disease"
+        - title: "Brief Obsteric"
+          payload: "/brief_obsteric"
+        - title: "Cervical Smears"
+          payload: "/cervical_smears"
+        - title: "Excess Vaginal Discharge"
+          payload: "/excess_vd"
+        - title: "Infant Chest Pain"
+          payload: "/infant_chest_pain"
+        - title: "Chest Pain"
+          payload: "/chest_pain"
+        - title: "Covid 19 Symptom checker"
+          payload: "/covid_symptoms"
+        - title: "Abdominal Pain"
+          payload: "/abdominal_pain"
+        - title: "Acute Chest Pain"
+          payload: "/acute_chest_pain"
+        - title: "Hair Loss"
+          payload: "/hair_loss"
+          
+  
   utter_consult_doctor:
-    - text: "Consult the doctor"
+    - text: "Okay. I am unable to find the problem. You need to take the Doctor consultation for further treatment."
     
   utter_icp_fever:
     - text: "Does your child have a fever, a cough that produces mucus and shortness of breath?"
@@ -126,27 +162,6 @@ responses:
           payload: '/decision{"decision_type":"Accept"}'
         - title: "Decline"
           payload: '/decision{"decision_type":"Decline"}'
-
-  utter_sym:
-    - text: "Choose from below queries:"
-      buttons:
-        - title: "pregnant"
-          payload: "/pregnant_disease"
-        - title: "sexual status"
-          payload: "/sexual_active"
-        - title: "urinary questions"
-          payload: "/urinary_question"
-        - title: "chronic disease"
-          payload: "/chronic_disease"
-        - title: "brief obsteric"
-          payload: "/brief_obsteric"
-        - title: "cervical smears"
-          payload: "/cervical_smears"
-        - title: "excess vaginal discharge"
-          payload: "/excess_vd"
-        - title: "Infant Chest Pain"
-          payload: "/infant_chest_pain"
-
 
   utter_pregnancy_check:
     - text: "Are you pregnant?"

@@ -98,6 +98,24 @@
 - infant chest pain
 - child chest pain
 
+## intent:chest_pain
+- chest pain
+- i am having chest pain
+- chest pain elders
+
+## intent:abdominal_pain
+- abdominal pain
+- pain in abdomin
+
+## intent:acute_chest_pain
+- acute chest pain
+- chest pain acute
+
+## intent:covid_symptoms
+- symptoms of covid
+- corona symptoms
+- symptoms of corona
+
 ## intent:child_choice
 - [1](choice)
 - [2](choice)
