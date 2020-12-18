@@ -116,6 +116,31 @@
 - [Diabetes](chronic_type)
 - [diabetes](chronic_type)
 
+## intent:infant_chest_pain
+- chest pain for my children
+- having chest pain for children
+- infant chest pain
+- child chest pain
+
+## intent:chest_pain
+- chest pain
+- i am having chest pain
+- chest pain elders
+
+## intent:abdominal_pain
+- abdominal pain
+- pain in abdomin
+
+## intent:acute_chest_pain
+- acute chest pain
+- chest pain acute
+
+## intent:covid_symptoms
+- symptoms of covid
+- corona symptoms
+- symptoms of corona
+
+<!-- 
 ## intent:colourless
 - [colourless](color1)
 - [Colourless](color1)
@@ -175,4 +200,128 @@
 
 ## intent:highrisk4
 - [Immunosuppression](risk4)
-- [immunosuppression](risk4)
+- [immunosuppression](risk4) -->
+
+## intent:pregtest_done
+- Did you get your [Urine Pregnancy Test](up) done at home?
+- Did you get your [Urine Pregnancy Test](up) done at home
+- Did you get [Urine Pregnancy Test](up) at home?
+
+## intent:morning_sick
+- Nausea, with or without vomiting [morning sickness](ms)
+- [Nausea](ms)
+- [morning sickness](ms)
+
+## intent:breast_big
+- The [breasts getting bigger](bb) and feeling painful
+- [breasts getting bigger](bb) 
+
+## intent:more_urine
+- Needing to [urinate more](mu) often than usual
+- Needing to [urinate more](mu) than usual
+
+## intent:tire
+- Feeling more [tired](feel_tire) than usual
+- Feeling [tired](feel_tire) than usual
+
+## intent:cramp
+- Mild [cramping](cremp) in the lower belly
+- Mild [cramping](cremp)
+
+## intent:preg_confirm
+- [Pregnancy Confirmed](preg_c)
+- [pregnancy confirmed](preg_c)
+
+## intent:want_preg
+- [wanted pregnancy](want)
+- [Wanted pregnancy](want)
+
+## intent:unwant_preg
+- [unwanted pregnancy](unwant)
+- [Unwanted pregnancy](unwant)
+
+## intent:mcommon_sys
+- [Most common symptoms](mcom)
+- [most common symptoms](mcom)
+
+## intent:lcommon_sys
+- [Less common symptoms](lcom)
+- [less common symptoms](lcom)
+
+## intent:common_sys
+- [common symptoms](com)
+- [common symptoms](com)
+
+## intent:srs_sys
+- [Serious symptoms](scom)
+- [serious symptoms](scom)
+
+## intent:dev_sys
+- How long does it take to [develop symptoms](dev) ?
+- How long does it take to [develop symptoms](dev) ?
+
+## intent:other_sys
+- [other symptoms](osys)
+- [Other symptoms](osys)
+
+## intent:stroke
+- [Strokes](stro) have also been reported in some people who have COVID-19
+- [Strokes](stro) have also been reported in some people who have Covid-19
+- [Strokes](stro) with people who have Covid-19
+
+## intent:emergency_sys
+- [emergency symptoms](esys)
+- [Emergency symptoms](esys)
+
+## intent:alert_sys
+- [ALERT Risk factors](alert) for progression to acute respiratory distress syndrome (ARDS)
+- [Alert Risk factors](alert) for progression to acute respiratory distress syndrome (ARDS)
+- [Alert Risk factors](alert) for progression to acute respiratory distress syndrome
+
+## intent:diff_diag
+- [DIFFERENTIAL DIAGNOSIS](diffdiag)
+- [Differential Diagnosis](diffdiag)
+
+## intent:peep_covid
+- What happens to people who get [COVID-19](covid)
+- What happens to people who get [Covid-19](covid)
+
+## intent:test_covid
+- What [test](testcovid) should I get to see if I have COVID-19
+- What [test](testcovid) should I get if I have COVID-19
+
+## intent:illness
+- Who is most at risk of [severe illness](ill) from COVID-19
+- Who is most at risk of [severe illness](ill) from COVID-19
+
+## intent:expose
+- After [exposure](exposed) to someone who has COVID-19, do the following
+- after [exposure](exposed) to someone who has COVID-19, do the following
+
+## intent:infected
+- How can we protect others and ourselves if we don't know who is [infected](infect)
+- how can we protect others and ourselves if we don't know who is [infected](infect)
+- How can we protect others and ourselves if we don't know who is [infected](infect) ?
+
+## intent:todo
+- What [should I do if](to_do) I have COVID-19 symptoms
+- what [should I do if](to_do) I have COVID-19 symptoms
+
+## intent:covid_preg
+- How does [COVID-19 affect pregnant women](covidpreg)
+- how does [COVID-19 affect pregnant women](covidpreg)
+
+## intent:lt_covid
+- Are there [long-term effects](lt) of COVID-19
+- are there [long-term effects](lt) of Covid-19
+
+## intent:test_time
+- When should I get a [test for COVID-19](testtime)
+- when should I get a [test for COVID-19](testtime)
+
+## intent:fetus
+- How can COVID-19 affect a [fetus](fet)
+- how can COVID-19 affect a [fetus](fet)
+
+
+
