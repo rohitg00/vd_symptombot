@@ -932,7 +932,10 @@
 
 # pregnancy path 1 yes
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -944,7 +947,10 @@
 
 # pregnancy path 1 yes a yes
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -960,7 +966,10 @@
 
 # pregnancy path 1 yes a no
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -976,7 +985,10 @@
 
 # pregnancy path 1 yes b
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1002,7 +1014,10 @@
 
 # pregnancy path 1 yes d
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1015,7 +1030,10 @@
 
 # pregnancy path 1 yes e
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1028,7 +1046,10 @@
 
 # pregnancy path 2 no
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1040,8 +1061,11 @@
 
 
 # pregnancy path 3 want 
-* greet
-  - utter_greet
+** greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1053,7 +1077,10 @@
 
 # pregnancy path 3 unwant 
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1065,7 +1092,10 @@
 
 # covid path 1 
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1075,7 +1105,10 @@
 
 # covid path 2
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1096,7 +1129,10 @@
 
 # covid path 4
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1106,7 +1142,11 @@
 
 # covid path 5
 * greet
-  - utter_greet
+  - utter_greet* greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1116,7 +1156,11 @@
 
 # covid path 6
 * greet
-  - utter_greet
+  - utter_greet* greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1126,7 +1170,10 @@
 
 # covid path 7
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1136,7 +1183,10 @@
 
 # covid path 8
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1146,7 +1196,10 @@
 
 # covid path 9
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1156,7 +1209,10 @@
 
 # covid path 10
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1166,7 +1222,10 @@
 
 # covid path 11
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1176,7 +1235,10 @@
 
 # covid path 12
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1186,7 +1248,10 @@
 
 # covid path 13
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1196,7 +1261,10 @@
 
 # covid path 14
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1206,7 +1274,10 @@
 
 # covid path 15
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1216,7 +1287,10 @@
 
 # covid path 16
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1226,7 +1300,10 @@
 
 # covid path 17
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1236,7 +1313,10 @@
 
 # covid path 18
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1246,7 +1326,10 @@
 
 # covid path 19
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
@@ -1256,7 +1339,10 @@
 
 # covid path 18
 * greet
-  - utter_greet
+  - utter_greet  
+  - contact_form
+  - form{"name": "contact_form"}
+  - form{"name": null}
 * symptom_checker{"symptom":"symptoms"}
   - utter_initial_bot
 * decision{"decision_type":"Accept"}
